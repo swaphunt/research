@@ -25,6 +25,10 @@ Some studies fetch raw data from public APIs instead of shipping it. See each st
 
 ## License
 
-Code: MIT (see LICENSE). Data, charts and text: CC BY 4.0 (see LICENSE-DATA). Please credit "SwapHunt (swaphunt.dev)".
+- Code: MIT (see [LICENSE](LICENSE))
+- Data, charts and text: CC BY 4.0 (see [LICENSE-DATA](LICENSE-DATA))
+- Fonts in `shared/fonts/`: SIL Open Font License 1.1
+
+Please credit "SwapHunt (swaphunt.dev)".
 
 Nothing here is investment advice.
