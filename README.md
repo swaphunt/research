@@ -10,7 +10,7 @@ Analysis code written with AI assistance and reviewed by a human.
 
 | Study | Article | Published |
 |---|---|---|
-| (none yet) | | |
+| [extreme-fear](extreme-fear/) | [https://swaphunt.dev/research/extreme-fear-bitcoin-buy-signal](https://swaphunt.dev/research/extreme-fear-bitcoin-buy-signal) | 2026-10-31 |
 
 ## Reproduce a study
 

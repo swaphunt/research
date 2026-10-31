@@ -1,0 +1,4323 @@
+{
+  "data": {
+    "fng_first": {
+      "value": "2018-02-01",
+      "desc": "First Fear & Greed day",
+      "source": "scripts/01_prepare.py"
+    },
+    "fng_last": {
+      "value": "2026-10-29",
+      "desc": "Last Fear & Greed day",
+      "source": "scripts/01_prepare.py"
+    },
+    "fng_days": {
+      "value": 3189,
+      "desc": "Days with an index value",
+      "source": "scripts/01_prepare.py"
+    },
+    "fng_missing_days": {
+      "value": 4,
+      "desc": "Calendar days without an index value",
+      "source": "scripts/01_prepare.py"
+    },
+    "btc_first": {
+      "value": "2017-08-17",
+      "desc": "First BTCUSDT day (Binance)",
+      "source": "scripts/01_prepare.py"
+    },
+    "btc_last": {
+      "value": "2026-10-28",
+      "desc": "Last BTCUSDT day (Binance)",
+      "source": "scripts/01_prepare.py"
+    },
+    "btc_missing_days": {
+      "value": 0,
+      "desc": "BTC days without a closing price",
+      "source": "scripts/01_prepare.py"
+    },
+    "fng_days_without_btc": {
+      "value": 1,
+      "desc": "Index days without a closed BTC close (e.g. today)",
+      "source": "scripts/01_prepare.py"
+    },
+    "zone_days": {
+      "fear_le25": {
+        "value": 739,
+        "desc": "Days in zone fear_le25",
+        "source": "scripts/01_prepare.py"
+      },
+      "fear_lt20": {
+        "value": 349,
+        "desc": "Days in zone fear_lt20",
+        "source": "scripts/01_prepare.py"
+      },
+      "greed_ge76": {
+        "value": 282,
+        "desc": "Days in zone greed_ge76",
+        "source": "scripts/01_prepare.py"
+      },
+      "greed_gt80": {
+        "value": 149,
+        "desc": "Days in zone greed_gt80",
+        "source": "scripts/01_prepare.py"
+      }
+    },
+    "episodes_14d": {
+      "fear_le25": {
+        "value": 27,
+        "desc": "Episodes in zone fear_le25 (14-day reset)",
+        "source": "scripts/01_prepare.py"
+      },
+      "fear_lt20": {
+        "value": 26,
+        "desc": "Episodes in zone fear_lt20 (14-day reset)",
+        "source": "scripts/01_prepare.py"
+      },
+      "greed_ge76": {
+        "value": 14,
+        "desc": "Episodes in zone greed_ge76 (14-day reset)",
+        "source": "scripts/01_prepare.py"
+      },
+      "greed_gt80": {
+        "value": 9,
+        "desc": "Episodes in zone greed_gt80 (14-day reset)",
+        "source": "scripts/01_prepare.py"
+      }
+    },
+    "label_range": {
+      "extreme_fear": {
+        "min": {
+          "value": 5,
+          "desc": "Lowest value with the label 'Extreme Fear'",
+          "source": "scripts/01_prepare.py"
+        },
+        "max": {
+          "value": 25,
+          "desc": "Highest value with the label 'Extreme Fear'",
+          "source": "scripts/01_prepare.py"
+        }
+      },
+      "extreme_greed": {
+        "min": {
+          "value": 76,
+          "desc": "Lowest value with the label 'Extreme Greed'",
+          "source": "scripts/01_prepare.py"
+        },
+        "max": {
+          "value": 95,
+          "desc": "Highest value with the label 'Extreme Greed'",
+          "source": "scripts/01_prepare.py"
+        }
+      },
+      "fear": {
+        "min": {
+          "value": 26,
+          "desc": "Lowest value with the label 'Fear'",
+          "source": "scripts/01_prepare.py"
+        },
+        "max": {
+          "value": 46,
+          "desc": "Highest value with the label 'Fear'",
+          "source": "scripts/01_prepare.py"
+        }
+      },
+      "greed": {
+        "min": {
+          "value": 55,
+          "desc": "Lowest value with the label 'Greed'",
+          "source": "scripts/01_prepare.py"
+        },
+        "max": {
+          "value": 75,
+          "desc": "Highest value with the label 'Greed'",
+          "source": "scripts/01_prepare.py"
+        }
+      },
+      "neutral": {
+        "min": {
+          "value": 47,
+          "desc": "Lowest value with the label 'Neutral'",
+          "source": "scripts/01_prepare.py"
+        },
+        "max": {
+          "value": 54,
+          "desc": "Highest value with the label 'Neutral'",
+          "source": "scripts/01_prepare.py"
+        }
+      }
+    }
+  },
+  "method": {
+    "seed": {
+      "value": 20261029,
+      "desc": "Seed for all random draws",
+      "source": "scripts/02_analysis.py"
+    },
+    "match_tol": {
+      "value": 0.05,
+      "desc": "Tolerance on 30-day trailing return in matched baseline",
+      "source": "scripts/02_analysis.py"
+    },
+    "n_draws": {
+      "value": 10000,
+      "desc": "Draws in bootstrap and baselines",
+      "source": "scripts/02_analysis.py"
+    }
+  },
+  "baseline": {
+    "all_days": {
+      "r7": {
+        "n": {
+          "value": 3181,
+          "desc": "All index days, 7 days ahead: n",
+          "source": "scripts/02_analysis.py"
+        },
+        "median": {
+          "value": 0.004077222612425713,
+          "desc": "All index days, 7 days ahead: median",
+          "source": "scripts/02_analysis.py"
+        },
+        "p10": {
+          "value": -0.08787935956935689,
+          "desc": "All index days, 7 days ahead: p10",
+          "source": "scripts/02_analysis.py"
+        },
+        "p90": {
+          "value": 0.11422477705643796,
+          "desc": "All index days, 7 days ahead: p90",
+          "source": "scripts/02_analysis.py"
+        },
+        "share_positive": {
+          "value": 0.5256208739390129,
+          "desc": "All index days, 7 days ahead: share_positive",
+          "source": "scripts/02_analysis.py"
+        },
+        "worst": {
+          "value": -0.46988739524754053,
+          "desc": "All index days, 7 days ahead: worst",
+          "source": "scripts/02_analysis.py"
+        },
+        "ci_lo": {
+          "value": 0.0010800244349418175,
+          "desc": "All days, 7 days: bootstrap 2.5%",
+          "source": "scripts/02_analysis.py"
+        },
+        "ci_hi": {
+          "value": 0.0066154470740353855,
+          "desc": "All days, 7 days: bootstrap 97.5%",
+          "source": "scripts/02_analysis.py"
+        }
+      },
+      "r30": {
+        "n": {
+          "value": 3158,
+          "desc": "All index days, 30 days ahead: n",
+          "source": "scripts/02_analysis.py"
+        },
+        "median": {
+          "value": 0.015848811855964096,
+          "desc": "All index days, 30 days ahead: median",
+          "source": "scripts/02_analysis.py"
+        },
+        "p10": {
+          "value": -0.18829933121222417,
+          "desc": "All index days, 30 days ahead: p10",
+          "source": "scripts/02_analysis.py"
+        },
+        "p90": {
+          "value": 0.3019802510278084,
+          "desc": "All index days, 30 days ahead: p90",
+          "source": "scripts/02_analysis.py"
+        },
+        "share_positive": {
+          "value": 0.5433818872704244,
+          "desc": "All index days, 30 days ahead: share_positive",
+          "source": "scripts/02_analysis.py"
+        },
+        "worst": {
+          "value": -0.5304741819490799,
+          "desc": "All index days, 30 days ahead: worst",
+          "source": "scripts/02_analysis.py"
+        },
+        "ci_lo": {
+          "value": 0.008843443708609122,
+          "desc": "All days, 30 days: bootstrap 2.5%",
+          "source": "scripts/02_analysis.py"
+        },
+        "ci_hi": {
+          "value": 0.021431845666931126,
+          "desc": "All days, 30 days: bootstrap 97.5%",
+          "source": "scripts/02_analysis.py"
+        }
+      },
+      "r90": {
+        "n": {
+          "value": 3098,
+          "desc": "All index days, 90 days ahead: n",
+          "source": "scripts/02_analysis.py"
+        },
+        "median": {
+          "value": 0.03529402049314656,
+          "desc": "All index days, 90 days ahead: median",
+          "source": "scripts/02_analysis.py"
+        },
+        "p10": {
+          "value": -0.29216461319030546,
+          "desc": "All index days, 90 days ahead: p10",
+          "source": "scripts/02_analysis.py"
+        },
+        "p90": {
+          "value": 0.6531358068066284,
+          "desc": "All index days, 90 days ahead: p90",
+          "source": "scripts/02_analysis.py"
+        },
+        "share_positive": {
+          "value": 0.5413169786959329,
+          "desc": "All index days, 90 days ahead: share_positive",
+          "source": "scripts/02_analysis.py"
+        },
+        "worst": {
+          "value": -0.5853237759741146,
+          "desc": "All index days, 90 days ahead: worst",
+          "source": "scripts/02_analysis.py"
+        },
+        "ci_lo": {
+          "value": 0.01777382023655868,
+          "desc": "All days, 90 days: bootstrap 2.5%",
+          "source": "scripts/02_analysis.py"
+        },
+        "ci_hi": {
+          "value": 0.05471293063041416,
+          "desc": "All days, 90 days: bootstrap 97.5%",
+          "source": "scripts/02_analysis.py"
+        }
+      },
+      "r180": {
+        "n": {
+          "value": 3008,
+          "desc": "All index days, 180 days ahead: n",
+          "source": "scripts/02_analysis.py"
+        },
+        "median": {
+          "value": 0.13606435030982622,
+          "desc": "All index days, 180 days ahead: median",
+          "source": "scripts/02_analysis.py"
+        },
+        "p10": {
+          "value": -0.41507381469136667,
+          "desc": "All index days, 180 days ahead: p10",
+          "source": "scripts/02_analysis.py"
+        },
+        "p90": {
+          "value": 1.3403829274130457,
+          "desc": "All index days, 180 days ahead: p90",
+          "source": "scripts/02_analysis.py"
+        },
+        "share_positive": {
+          "value": 0.5797872340425532,
+          "desc": "All index days, 180 days ahead: share_positive",
+          "source": "scripts/02_analysis.py"
+        },
+        "worst": {
+          "value": -0.6066904761904761,
+          "desc": "All index days, 180 days ahead: worst",
+          "source": "scripts/02_analysis.py"
+        },
+        "ci_lo": {
+          "value": 0.10664341317042592,
+          "desc": "All days, 180 days: bootstrap 2.5%",
+          "source": "scripts/02_analysis.py"
+        },
+        "ci_hi": {
+          "value": 0.15156756350789025,
+          "desc": "All days, 180 days: bootstrap 97.5%",
+          "source": "scripts/02_analysis.py"
+        }
+      }
+    }
+  },
+  "results": {
+    "label": {
+      "fear": {
+        "reset14": {
+          "episodes": {
+            "value": 27,
+            "desc": "Episodes (label, fear, 14-day reset)",
+            "source": "scripts/02_analysis.py"
+          },
+          "r7": {
+            "n": {
+              "value": 27,
+              "desc": "label/fear/reset14, 7 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.021312899877493963,
+              "desc": "label/fear/reset14, 7 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.14851325992615302,
+              "desc": "label/fear/reset14, 7 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.09733384508375358,
+              "desc": "label/fear/reset14, 7 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.37037037037037035,
+              "desc": "label/fear/reset14, 7 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.365819363999662,
+              "desc": "label/fear/reset14, 7 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.05006728232020741,
+              "desc": "label/fear/reset14, 7 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.009173791611652105,
+              "desc": "label/fear/reset14, 7 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.0307,
+              "desc": "label/fear/reset14, 7 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset14, 7 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min": {
+              "value": -0.03367286272956094,
+              "desc": "label/fear/reset14, 7 days ahead: loo_min",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max": {
+              "value": -0.013769668203125973,
+              "desc": "label/fear/reset14, 7 days ahead: loo_max",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min_year": {
+              "value": 2019,
+              "desc": "label/fear/reset14, 7 days ahead: loo_min_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max_year": {
+              "value": 2021,
+              "desc": "label/fear/reset14, 7 days ahead: loo_max_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": -0.002848430803997548,
+              "desc": "label/fear/reset14, 7 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.0634,
+              "desc": "label/fear/reset14, 7 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_lo": {
+              "value": -0.027418446240671468,
+              "desc": "Matched, 7 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_hi": {
+              "value": 0.025202133793974513,
+              "desc": "Matched, 7 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_median": {
+              "value": 0.00497051188709996,
+              "desc": "Matched without days +-14 of episodes, 7 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_pctile": {
+              "value": 0.007,
+              "desc": "Matched without days +-14 of episodes, 7 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_min_pool": {
+              "value": 1,
+              "desc": "Matched without days +-14 of episodes, 7 days: smallest pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_lo": {
+              "value": -0.016369940725222756,
+              "desc": "Matched_excl14, 7 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_hi": {
+              "value": 0.02654246387899195,
+              "desc": "Matched_excl14, 7 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_median": {
+              "value": -0.015769211686009532,
+              "desc": "Without 2018, 7 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_matched_median": {
+              "value": -0.00364273758846545,
+              "desc": "Without 2018, matched, 7 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_matched_pctile": {
+              "value": 0.1795,
+              "desc": "Without 2018, matched, 7 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_share_near14": {
+              "value": 0.37211785911068834,
+              "desc": "Matched, 7 days: expected share of matched days within +-14 days of an episode",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r30": {
+            "n": {
+              "value": 27,
+              "desc": "label/fear/reset14, 30 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.0028201415836381916,
+              "desc": "label/fear/reset14, 30 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.17845168126949873,
+              "desc": "label/fear/reset14, 30 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.23228090762513537,
+              "desc": "label/fear/reset14, 30 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.5185185185185185,
+              "desc": "label/fear/reset14, 30 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.4291541282262541,
+              "desc": "label/fear/reset14, 30 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.07273460334799664,
+              "desc": "label/fear/reset14, 30 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.02902281209547497,
+              "desc": "label/fear/reset14, 30 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.3635,
+              "desc": "label/fear/reset14, 30 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset14, 30 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min": {
+              "value": -0.01496845411662362,
+              "desc": "label/fear/reset14, 30 days ahead: loo_min",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max": {
+              "value": 0.008522722396352544,
+              "desc": "label/fear/reset14, 30 days ahead: loo_max",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min_year": {
+              "value": 2024,
+              "desc": "label/fear/reset14, 30 days ahead: loo_min_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max_year": {
+              "value": 2020,
+              "desc": "label/fear/reset14, 30 days ahead: loo_max_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.010135189286491597,
+              "desc": "label/fear/reset14, 30 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.4371,
+              "desc": "label/fear/reset14, 30 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_lo": {
+              "value": -0.05190067984363245,
+              "desc": "Matched, 30 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_hi": {
+              "value": 0.08217321670567945,
+              "desc": "Matched, 30 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_median": {
+              "value": 0.020625538536882093,
+              "desc": "Matched without days +-14 of episodes, 30 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_pctile": {
+              "value": 0.2818,
+              "desc": "Matched without days +-14 of episodes, 30 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_min_pool": {
+              "value": 1,
+              "desc": "Matched without days +-14 of episodes, 30 days: smallest pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_lo": {
+              "value": -0.035983218911365245,
+              "desc": "Matched_excl14, 30 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_hi": {
+              "value": 0.08519102981434612,
+              "desc": "Matched_excl14, 30 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_median": {
+              "value": -0.013604212395158966,
+              "desc": "Without 2018, 30 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_matched_median": {
+              "value": 0.009685681470137819,
+              "desc": "Without 2018, matched, 30 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_matched_pctile": {
+              "value": 0.2921,
+              "desc": "Without 2018, matched, 30 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_share_near14": {
+              "value": 0.3739150607854964,
+              "desc": "Matched, 30 days: expected share of matched days within +-14 days of an episode",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r90": {
+            "n": {
+              "value": 27,
+              "desc": "label/fear/reset14, 90 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.09070084949296642,
+              "desc": "label/fear/reset14, 90 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.31604136325849075,
+              "desc": "label/fear/reset14, 90 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.31297927737009984,
+              "desc": "label/fear/reset14, 90 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.48148148148148145,
+              "desc": "label/fear/reset14, 90 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.5018430470513493,
+              "desc": "label/fear/reset14, 90 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.1979998742866086,
+              "desc": "label/fear/reset14, 90 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.17132754394319805,
+              "desc": "label/fear/reset14, 90 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.0637,
+              "desc": "label/fear/reset14, 90 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset14, 90 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min": {
+              "value": -0.12360461854443777,
+              "desc": "label/fear/reset14, 90 days ahead: loo_min",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max": {
+              "value": 0.042102744730873276,
+              "desc": "label/fear/reset14, 90 days ahead: loo_max",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min_year": {
+              "value": 2024,
+              "desc": "label/fear/reset14, 90 days ahead: loo_min_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max_year": {
+              "value": 2018,
+              "desc": "label/fear/reset14, 90 days ahead: loo_max_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.022565640621459604,
+              "desc": "label/fear/reset14, 90 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.0409,
+              "desc": "label/fear/reset14, 90 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_lo": {
+              "value": -0.10736901838081292,
+              "desc": "Matched, 90 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_hi": {
+              "value": 0.17442950303397398,
+              "desc": "Matched, 90 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_median": {
+              "value": 0.0739454094292804,
+              "desc": "Matched without days +-14 of episodes, 90 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_pctile": {
+              "value": 0.0092,
+              "desc": "Matched without days +-14 of episodes, 90 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_min_pool": {
+              "value": 1,
+              "desc": "Matched without days +-14 of episodes, 90 days: smallest pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_lo": {
+              "value": -0.05713766686656275,
+              "desc": "Matched_excl14, 90 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_hi": {
+              "value": 0.27659993947286177,
+              "desc": "Matched_excl14, 90 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_median": {
+              "value": 0.042102744730873276,
+              "desc": "Without 2018, 90 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_matched_median": {
+              "value": 0.02361146780477208,
+              "desc": "Without 2018, matched, 90 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_matched_pctile": {
+              "value": 0.5493,
+              "desc": "Without 2018, matched, 90 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_share_near14": {
+              "value": 0.3775893201368637,
+              "desc": "Matched, 90 days: expected share of matched days within +-14 days of an episode",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r180": {
+            "n": {
+              "value": 26,
+              "desc": "label/fear/reset14, 180 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.039059027211155006,
+              "desc": "label/fear/reset14, 180 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.4438624527611547,
+              "desc": "label/fear/reset14, 180 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.6605781669025255,
+              "desc": "label/fear/reset14, 180 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.46153846153846156,
+              "desc": "label/fear/reset14, 180 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.5149332725139452,
+              "desc": "label/fear/reset14, 180 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.20458989703539443,
+              "desc": "label/fear/reset14, 180 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.32632000870829647,
+              "desc": "label/fear/reset14, 180 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.1266,
+              "desc": "label/fear/reset14, 180 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset14, 180 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min": {
+              "value": -0.07703837213537834,
+              "desc": "label/fear/reset14, 180 days ahead: loo_min",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max": {
+              "value": 0.2211946173705438,
+              "desc": "label/fear/reset14, 180 days ahead: loo_max",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min_year": {
+              "value": 2024,
+              "desc": "label/fear/reset14, 180 days ahead: loo_min_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max_year": {
+              "value": 2018,
+              "desc": "label/fear/reset14, 180 days ahead: loo_max_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.15160156605633757,
+              "desc": "label/fear/reset14, 180 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.1623,
+              "desc": "label/fear/reset14, 180 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_lo": {
+              "value": -0.1666682782351291,
+              "desc": "Matched, 180 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_hi": {
+              "value": 0.3932576746499129,
+              "desc": "Matched, 180 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_median": {
+              "value": 0.2763612844046942,
+              "desc": "Matched without days +-14 of episodes, 180 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_pctile": {
+              "value": 0.028,
+              "desc": "Matched without days +-14 of episodes, 180 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_min_pool": {
+              "value": 1,
+              "desc": "Matched without days +-14 of episodes, 180 days: smallest pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_lo": {
+              "value": -0.04983538686534023,
+              "desc": "Matched_excl14, 180 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_hi": {
+              "value": 0.5455241826561444,
+              "desc": "Matched_excl14, 180 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_median": {
+              "value": 0.2211946173705438,
+              "desc": "Without 2018, 180 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_matched_median": {
+              "value": 0.17551907210683976,
+              "desc": "Without 2018, matched, 180 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "no2018_matched_pctile": {
+              "value": 0.6162,
+              "desc": "Without 2018, matched, 180 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_share_near14": {
+              "value": 0.3774758093100016,
+              "desc": "Matched, 180 days: expected share of matched days within +-14 days of an episode",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "episodes_by_year": {
+            "y2018": {
+              "value": 6,
+              "desc": "Episodes in 2018 (fear)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2019": {
+              "value": 5,
+              "desc": "Episodes in 2019 (fear)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2020": {
+              "value": 1,
+              "desc": "Episodes in 2020 (fear)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2021": {
+              "value": 3,
+              "desc": "Episodes in 2021 (fear)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2022": {
+              "value": 5,
+              "desc": "Episodes in 2022 (fear)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2024": {
+              "value": 3,
+              "desc": "Episodes in 2024 (fear)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2025": {
+              "value": 3,
+              "desc": "Episodes in 2025 (fear)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2026": {
+              "value": 1,
+              "desc": "Episodes in 2026 (fear)",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "share_nonzone_days_near_episode": {
+            "value": 0.2273469387755102,
+            "desc": "Share of days outside the zone that are within +-14 days of an episode",
+            "source": "scripts/02_analysis.py"
+          },
+          "episode": {
+            "d20180202": {
+              "fng": {
+                "value": 15,
+                "desc": "Index value on the episode day 2018-02-02",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.40527336353539756,
+                "desc": "30-day trailing return 2018-02-02",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.021312899877493963,
+                "desc": "7-day return after 2018-02-02",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.2977528533094105,
+                "desc": "30-day return after 2018-02-02",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.09883545981474184,
+                "desc": "90-day return after 2018-02-02",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.14295567579507795,
+                "desc": "180-day return after 2018-02-02",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20180327": {
+              "fng": {
+                "value": 24,
+                "desc": "Index value on the episode day 2018-03-27",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.18712095933263817,
+                "desc": "30-day trailing return 2018-03-27",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.05006728232020741,
+                "desc": "7-day return after 2018-03-27",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.18863294383561824,
+                "desc": "30-day return after 2018-03-27",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.1979998742866086,
+                "desc": "90-day return after 2018-03-27",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.139504663581985,
+                "desc": "180-day return after 2018-03-27",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20180525": {
+              "fng": {
+                "value": 25,
+                "desc": "Index value on the episode day 2018-05-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.15930006685464126,
+                "desc": "30-day trailing return 2018-05-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.008583880917258924,
+                "desc": "7-day return after 2018-05-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.177018908408207,
+                "desc": "30-day return after 2018-05-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.12498189620490807,
+                "desc": "90-day return after 2018-05-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.37494032452728987,
+                "desc": "180-day return after 2018-05-25",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20180805": {
+              "fng": {
+                "value": 23,
+                "desc": "Index value on the episode day 2018-08-05",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.06269648914184733,
+                "desc": "30-day trailing return 2018-08-05",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.10191353024334471,
+                "desc": "7-day return after 2018-08-05",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.04767382431283895,
+                "desc": "30-day return after 2018-08-05",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.09070084949296642,
+                "desc": "90-day return after 2018-08-05",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.5071218176045921,
+                "desc": "180-day return after 2018-08-05",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20181011": {
+              "fng": {
+                "value": 19,
+                "desc": "Index value on the episode day 2018-10-11",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.006708594721767214,
+                "desc": "30-day trailing return 2018-10-11",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.058579681032773,
+                "desc": "7-day return after 2018-10-11",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.028846830479090535,
+                "desc": "30-day return after 2018-10-11",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.3656080272779032,
+                "desc": "90-day return after 2018-10-11",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.17635317975652043,
+                "desc": "180-day return after 2018-10-11",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20181116": {
+              "fng": {
+                "value": 23,
+                "desc": "Index value on the episode day 2018-11-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.1609505569739308,
+                "desc": "30-day trailing return 2018-11-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.2184128544503655,
+                "desc": "7-day return after 2018-11-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.4291541282262541,
+                "desc": "30-day return after 2018-11-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.3651700689894164,
+                "desc": "90-day return after 2018-11-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.44447607294278235,
+                "desc": "180-day return after 2018-11-16",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20190715": {
+              "fng": {
+                "value": 16,
+                "desc": "Index value on the episode day 2019-07-15",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.2304562534766763,
+                "desc": "30-day trailing return 2019-07-15",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.04598421215789317,
+                "desc": "7-day return after 2019-07-15",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.07273460334799664,
+                "desc": "30-day return after 2019-07-15",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.23653254258805456,
+                "desc": "90-day return after 2019-07-15",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.2600593058958991,
+                "desc": "180-day return after 2019-07-15",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20190814": {
+              "fng": {
+                "value": 11,
+                "desc": "Index value on the episode day 2019-08-14",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.07273460334799664,
+                "desc": "30-day trailing return 2019-08-14",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.009173791611652105,
+                "desc": "7-day return after 2019-08-14",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.02902281209547497,
+                "desc": "30-day return after 2019-08-14",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.12222734088396747,
+                "desc": "90-day return after 2019-08-14",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.019754496600622784,
+                "desc": "180-day return after 2019-08-14",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20190925": {
+              "fng": {
+                "value": 15,
+                "desc": "Index value on the episode day 2019-09-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.1872496324326931,
+                "desc": "30-day trailing return 2019-09-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.008316676650790722,
+                "desc": "7-day return after 2019-09-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.026686674456260828,
+                "desc": "30-day return after 2019-09-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.13929691994709392,
+                "desc": "90-day return after 2019-09-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.23282661431426843,
+                "desc": "180-day return after 2019-09-25",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20191024": {
+              "fng": {
+                "value": 20,
+                "desc": "Index value on the episode day 2019-10-24",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.1272474020209251,
+                "desc": "30-day trailing return 2019-10-24",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.2331819205899297,
+                "desc": "7-day return after 2019-10-24",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.013604212395158966,
+                "desc": "30-day return after 2019-10-24",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.17132754394319805,
+                "desc": "90-day return after 2019-10-24",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.07703837213537834,
+                "desc": "180-day return after 2019-10-24",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20191122": {
+              "fng": {
+                "value": 20,
+                "desc": "Index value on the episode day 2019-11-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.02657025534981028,
+                "desc": "30-day trailing return 2019-11-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.06486448557626834,
+                "desc": "7-day return after 2019-11-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.032086216314013205,
+                "desc": "30-day return after 2019-11-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.3203242054805642,
+                "desc": "90-day return after 2019-11-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.30863084960162257,
+                "desc": "180-day return after 2019-11-22",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20200309": {
+              "fng": {
+                "value": 17,
+                "desc": "Index value on the episode day 2020-03-09",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.1986023314687646,
+                "desc": "30-day trailing return 2020-03-09",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.365819363999662,
+                "desc": "7-day return after 2020-03-09",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.07170231037835428,
+                "desc": "30-day return after 2020-03-09",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.2291487754528132,
+                "desc": "90-day return after 2020-03-09",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.2820752420909802,
+                "desc": "180-day return after 2020-03-09",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20210516": {
+              "fng": {
+                "value": 20,
+                "desc": "Index value on the episode day 2021-05-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.24298277649882294,
+                "desc": "30-day trailing return 2021-05-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.2536263097250788,
+                "desc": "7-day return after 2021-05-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.13541367390672276,
+                "desc": "30-day return after 2021-05-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.013719350010230169,
+                "desc": "90-day return after 2021-05-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.38100707493835007,
+                "desc": "180-day return after 2021-05-16",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20210922": {
+              "fng": {
+                "value": 21,
+                "desc": "Index value on the episode day 2021-09-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.12013291882919075,
+                "desc": "30-day trailing return 2021-09-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.04637488715336191,
+                "desc": "7-day return after 2021-09-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.3937342356318183,
+                "desc": "30-day return after 2021-09-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.12277966847489208,
+                "desc": "90-day return after 2021-09-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.05836355782168723,
+                "desc": "180-day return after 2021-09-22",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20211127": {
+              "fng": {
+                "value": 21,
+                "desc": "Index value on the episode day 2021-11-27",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.09665330546526019,
+                "desc": "30-day trailing return 2021-11-27",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.1017627043935393,
+                "desc": "7-day return after 2021-11-27",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.07345603692035763,
+                "desc": "30-day return after 2021-11-27",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.28328889277120695,
+                "desc": "90-day return after 2021-11-27",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.46635964271871344,
+                "desc": "180-day return after 2021-11-27",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20220219": {
+              "fng": {
+                "value": 25,
+                "desc": "Index value on the episode day 2022-02-19",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.014791704512018167,
+                "desc": "30-day trailing return 2022-02-19",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.024013720843021336,
+                "desc": "7-day return after 2022-02-19",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.02303141507171924,
+                "desc": "30-day return after 2022-02-19",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.27141679830196086,
+                "desc": "90-day return after 2022-02-19",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.421365262803596,
+                "desc": "180-day return after 2022-02-19",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20220412": {
+              "fng": {
+                "value": 20,
+                "desc": "Index value on the episode day 2022-04-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.06081952832041648,
+                "desc": "30-day trailing return 2022-04-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.03538969740191744,
+                "desc": "7-day return after 2022-04-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.2756133883169881,
+                "desc": "30-day return after 2022-04-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.5018430470513493,
+                "desc": "90-day return after 2022-04-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.5149332725139452,
+                "desc": "180-day return after 2022-04-12",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20220824": {
+              "fng": {
+                "value": 25,
+                "desc": "Index value on the episode day 2022-08-24",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.002683133983079067,
+                "desc": "30-day trailing return 2022-08-24",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.06168359534408341,
+                "desc": "7-day return after 2022-08-24",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.097255813344016,
+                "desc": "30-day return after 2022-08-24",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.24059906177812895,
+                "desc": "90-day return after 2022-08-24",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.16258456538912247,
+                "desc": "180-day return after 2022-08-24",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20221110": {
+              "fng": {
+                "value": 22,
+                "desc": "Index value on the episode day 2022-11-10",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.0765398740818467,
+                "desc": "30-day trailing return 2022-11-10",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.05162105885126822,
+                "desc": "7-day return after 2022-11-10",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.026910741627677703,
+                "desc": "30-day return after 2022-11-10",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.30463066333733857,
+                "desc": "90-day return after 2022-11-10",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.5696855035040322,
+                "desc": "180-day return after 2022-11-10",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20221231": {
+              "fng": {
+                "value": 25,
+                "desc": "Index value on the episode day 2022-12-31",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.02562057609629742,
+                "desc": "30-day trailing return 2022-12-31",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.024251015572105405,
+                "desc": "7-day return after 2022-12-31",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.37985721539800754,
+                "desc": "30-day return after 2022-12-31",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.7207515233581583,
+                "desc": "90-day return after 2022-12-31",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.8405618289970016,
+                "desc": "180-day return after 2022-12-31",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20240712": {
+              "fng": {
+                "value": 25,
+                "desc": "Index value on the episode day 2024-07-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.15198188678979951,
+                "desc": "30-day trailing return 2024-07-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.15151211540687282,
+                "desc": "7-day return after 2024-07-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.014225303209066897,
+                "desc": "30-day return after 2024-07-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.042102744730873276,
+                "desc": "90-day return after 2024-07-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.6421158732818442,
+                "desc": "180-day return after 2024-07-12",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20240806": {
+              "fng": {
+                "value": 17,
+                "desc": "Index value on the episode day 2024-08-06",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.00293960683385186,
+                "desc": "30-day trailing return 2024-08-06",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.0814883293191373,
+                "desc": "7-day return after 2024-08-06",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.0028201415836381916,
+                "desc": "30-day return after 2024-08-06",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.21113130357157828,
+                "desc": "90-day return after 2024-08-06",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.7439679511677642,
+                "desc": "180-day return after 2024-08-06",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20240906": {
+              "fng": {
+                "value": 22,
+                "desc": "Index value on the episode day 2024-09-06",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.021242547270149847,
+                "desc": "30-day trailing return 2024-09-06",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.12110211873067778,
+                "desc": "7-day return after 2024-09-06",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.1641299580063884,
+                "desc": "30-day return after 2024-09-06",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.7965213923547945,
+                "desc": "90-day return after 2024-09-06",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.6790404605232068,
+                "desc": "180-day return after 2024-09-06",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20250225": {
+              "fng": {
+                "value": 25,
+                "desc": "Index value on the episode day 2025-02-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.13583706879750546,
+                "desc": "30-day trailing return 2025-02-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.015769211686009532,
+                "desc": "7-day return after 2025-02-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.016332695838088274,
+                "desc": "30-day return after 2025-02-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.23403581851232058,
+                "desc": "90-day return after 2025-02-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.27980466935196513,
+                "desc": "180-day return after 2025-02-25",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20250403": {
+              "fng": {
+                "value": 25,
+                "desc": "Index value on the episode day 2025-04-03",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.046617755463384314,
+                "desc": "30-day trailing return 2025-04-03",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.04333200461610054,
+                "desc": "7-day return after 2025-04-03",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.15193919610484352,
+                "desc": "30-day return after 2025-04-03",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.30808265862979023,
+                "desc": "90-day return after 2025-04-03",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.3705647753256127,
+                "desc": "180-day return after 2025-04-03",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20251012": {
+              "fng": {
+                "value": 24,
+                "desc": "Index value on the episode day 2025-10-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": -0.00922714256435997,
+                "desc": "30-day trailing return 2025-10-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.054941596467604104,
+                "desc": "7-day return after 2025-10-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.10351369360153373,
+                "desc": "30-day return after 2025-10-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.21272055727791184,
+                "desc": "90-day return after 2025-10-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.3653143560997506,
+                "desc": "180-day return after 2025-10-12",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20260519": {
+              "fng": {
+                "value": 25,
+                "desc": "Index value on the episode day 2026-05-19",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.04109073777207861,
+                "desc": "30-day trailing return 2026-05-19",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.011770124720242414,
+                "desc": "7-day return after 2026-05-19",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.18060084056143633,
+                "desc": "30-day return after 2026-05-19",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.16011404272775875,
+                "desc": "90-day return after 2026-05-19",
+                "source": "scripts/02_analysis.py"
+              }
+            }
+          },
+          "episodes_no2018": {
+            "value": 21,
+            "desc": "Fear episodes without 2018",
+            "source": "scripts/02_analysis.py"
+          }
+        },
+        "reset7": {
+          "episodes": {
+            "value": 35,
+            "desc": "Episodes (label, fear, 7-day reset)",
+            "source": "scripts/02_analysis.py"
+          },
+          "r7": {
+            "n": {
+              "value": 35,
+              "desc": "label/fear/reset7, 7 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.011770124720242414,
+              "desc": "label/fear/reset7, 7 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.10185319990342254,
+              "desc": "label/fear/reset7, 7 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.07483879182198974,
+              "desc": "label/fear/reset7, 7 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.4,
+              "desc": "label/fear/reset7, 7 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.365819363999662,
+              "desc": "label/fear/reset7, 7 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.04637488715336191,
+              "desc": "label/fear/reset7, 7 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.015387317997478167,
+              "desc": "label/fear/reset7, 7 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.0933,
+              "desc": "label/fear/reset7, 7 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset7, 7 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": -0.0029788443397895104,
+              "desc": "label/fear/reset7, 7 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.2034,
+              "desc": "label/fear/reset7, 7 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r30": {
+            "n": {
+              "value": 35,
+              "desc": "label/fear/reset7, 30 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.013604212395158966,
+              "desc": "label/fear/reset7, 30 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.18625389327477335,
+              "desc": "label/fear/reset7, 30 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.21660075636819756,
+              "desc": "label/fear/reset7, 30 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.4857142857142857,
+              "desc": "label/fear/reset7, 30 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.4291541282262541,
+              "desc": "label/fear/reset7, 30 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.07273460334799664,
+              "desc": "label/fear/reset7, 30 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.028846830479090535,
+              "desc": "label/fear/reset7, 30 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.1637,
+              "desc": "label/fear/reset7, 30 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset7, 30 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.011048003699067221,
+              "desc": "label/fear/reset7, 30 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.2241,
+              "desc": "label/fear/reset7, 30 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r90": {
+            "n": {
+              "value": 34,
+              "desc": "label/fear/reset7, 90 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.04342444035815257,
+              "desc": "label/fear/reset7, 90 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.2797272644304331,
+              "desc": "label/fear/reset7, 90 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.3713421031046377,
+              "desc": "label/fear/reset7, 90 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.47058823529411764,
+              "desc": "label/fear/reset7, 90 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.5018430470513493,
+              "desc": "label/fear/reset7, 90 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.14665049014177345,
+              "desc": "label/fear/reset7, 90 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.17132754394319805,
+              "desc": "label/fear/reset7, 90 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.1471,
+              "desc": "label/fear/reset7, 90 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset7, 90 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.02061919837903009,
+              "desc": "label/fear/reset7, 90 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.1047,
+              "desc": "label/fear/reset7, 90 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r180": {
+            "n": {
+              "value": 33,
+              "desc": "label/fear/reset7, 180 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.05836355782168723,
+              "desc": "label/fear/reset7, 180 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.4907820505099244,
+              "desc": "label/fear/reset7, 180 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.7309824530388527,
+              "desc": "label/fear/reset7, 180 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.45454545454545453,
+              "desc": "label/fear/reset7, 180 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.569590077602557,
+              "desc": "label/fear/reset7, 180 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.22590421688396978,
+              "desc": "label/fear/reset7, 180 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.30863084960162257,
+              "desc": "label/fear/reset7, 180 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.0763,
+              "desc": "label/fear/reset7, 180 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset7, 180 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.1419846978072974,
+              "desc": "label/fear/reset7, 180 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.1688,
+              "desc": "label/fear/reset7, 180 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          }
+        },
+        "reset30": {
+          "episodes": {
+            "value": 14,
+            "desc": "Episodes (label, fear, 30-day reset)",
+            "source": "scripts/02_analysis.py"
+          },
+          "r7": {
+            "n": {
+              "value": 14,
+              "desc": "label/fear/reset30, 7 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.04822108473678466,
+              "desc": "label/fear/reset30, 7 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.2081124758805586,
+              "desc": "label/fear/reset30, 7 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.0024776792260085443,
+              "desc": "label/fear/reset30, 7 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.14285714285714285,
+              "desc": "label/fear/reset30, 7 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.365819363999662,
+              "desc": "label/fear/reset30, 7 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.08179856279371406,
+              "desc": "label/fear/reset30, 7 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": -0.01654151229886819,
+              "desc": "label/fear/reset30, 7 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.0048,
+              "desc": "label/fear/reset30, 7 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset30, 7 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": -0.00044281231156989564,
+              "desc": "label/fear/reset30, 7 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.0143,
+              "desc": "label/fear/reset30, 7 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r30": {
+            "n": {
+              "value": 14,
+              "desc": "label/fear/reset30, 30 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.07221845686317546,
+              "desc": "label/fear/reset30, 30 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.16453733805776172,
+              "desc": "label/fear/reset30, 30 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.2650168804672729,
+              "desc": "label/fear/reset30, 30 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.35714285714285715,
+              "desc": "label/fear/reset30, 30 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.18060084056143633,
+              "desc": "label/fear/reset30, 30 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.10351369360153373,
+              "desc": "label/fear/reset30, 30 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.04767382431283895,
+              "desc": "label/fear/reset30, 30 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.0245,
+              "desc": "label/fear/reset30, 30 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset30, 30 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.011739725328315076,
+              "desc": "label/fear/reset30, 30 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.0234,
+              "desc": "label/fear/reset30, 30 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r90": {
+            "n": {
+              "value": 14,
+              "desc": "label/fear/reset30, 90 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.10784137284893724,
+              "desc": "label/fear/reset30, 90 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.23937910602110662,
+              "desc": "label/fear/reset30, 90 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.19723804335943698,
+              "desc": "label/fear/reset30, 90 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.42857142857142855,
+              "desc": "label/fear/reset30, 90 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.28328889277120695,
+              "desc": "label/fear/reset30, 90 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.21272055727791184,
+              "desc": "label/fear/reset30, 90 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.08244120660288268,
+              "desc": "label/fear/reset30, 90 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.0832,
+              "desc": "label/fear/reset30, 90 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset30, 90 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.03221587186257957,
+              "desc": "label/fear/reset30, 90 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.0409,
+              "desc": "label/fear/reset30, 90 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r180": {
+            "n": {
+              "value": 13,
+              "desc": "label/fear/reset30, 180 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.139504663581985,
+              "desc": "label/fear/reset30, 180 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.4480757790804287,
+              "desc": "label/fear/reset30, 180 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.36122070836887615,
+              "desc": "label/fear/reset30, 180 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.38461538461538464,
+              "desc": "label/fear/reset30, 180 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.5071218176045921,
+              "desc": "label/fear/reset30, 180 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.3653143560997506,
+              "desc": "label/fear/reset30, 180 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.27980466935196513,
+              "desc": "label/fear/reset30, 180 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.075,
+              "desc": "label/fear/reset30, 180 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 8,
+              "desc": "label/fear/reset30, 180 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.09039252844191692,
+              "desc": "label/fear/reset30, 180 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.2148,
+              "desc": "label/fear/reset30, 180 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          }
+        }
+      },
+      "greed": {
+        "reset14": {
+          "episodes": {
+            "value": 14,
+            "desc": "Episodes (label, greed, 14-day reset)",
+            "source": "scripts/02_analysis.py"
+          },
+          "r7": {
+            "n": {
+              "value": 14,
+              "desc": "label/greed/reset14, 7 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.0259035359335138,
+              "desc": "label/greed/reset14, 7 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.04252998271350239,
+              "desc": "label/greed/reset14, 7 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.0632381871346406,
+              "desc": "label/greed/reset14, 7 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.6428571428571429,
+              "desc": "label/greed/reset14, 7 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.06445564953372374,
+              "desc": "label/greed/reset14, 7 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.02800094419594601,
+              "desc": "label/greed/reset14, 7 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.05042192232425735,
+              "desc": "label/greed/reset14, 7 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.8642,
+              "desc": "label/greed/reset14, 7 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.004368226740574271,
+              "desc": "label/greed/reset14, 7 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.8418,
+              "desc": "label/greed/reset14, 7 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset14, 7 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min": {
+              "value": 0.014594017395177072,
+              "desc": "label/greed/reset14, 7 days ahead: loo_min",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max": {
+              "value": 0.03172358639987627,
+              "desc": "label/greed/reset14, 7 days ahead: loo_max",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min_year": {
+              "value": 2020,
+              "desc": "label/greed/reset14, 7 days ahead: loo_min_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max_year": {
+              "value": 2025,
+              "desc": "label/greed/reset14, 7 days ahead: loo_max_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_lo": {
+              "value": -0.032629394373114705,
+              "desc": "Matched, 7 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_hi": {
+              "value": 0.04812025917587016,
+              "desc": "Matched, 7 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_median": {
+              "value": -0.005029463789993721,
+              "desc": "Matched without days +-14 of episodes, 7 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_pctile": {
+              "value": 0.9485,
+              "desc": "Matched without days +-14 of episodes, 7 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_min_pool": {
+              "value": 16,
+              "desc": "Matched without days +-14 of episodes, 7 days: smallest pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_lo": {
+              "value": -0.042568331910216715,
+              "desc": "Matched_excl14, 7 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_hi": {
+              "value": 0.03293022755352838,
+              "desc": "Matched_excl14, 7 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_share_near14": {
+              "value": 0.2520530502834019,
+              "desc": "Matched, 7 days: expected share of matched days within +-14 days of an episode",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r30": {
+            "n": {
+              "value": 14,
+              "desc": "label/greed/reset14, 30 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.02483430718547175,
+              "desc": "label/greed/reset14, 30 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.05812521383207392,
+              "desc": "label/greed/reset14, 30 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.4096345719895343,
+              "desc": "label/greed/reset14, 30 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.5714285714285714,
+              "desc": "label/greed/reset14, 30 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.0752455439430213,
+              "desc": "label/greed/reset14, 30 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.03670220908423644,
+              "desc": "label/greed/reset14, 30 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.1428903702541331,
+              "desc": "label/greed/reset14, 30 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.576,
+              "desc": "label/greed/reset14, 30 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.0006827252876681622,
+              "desc": "label/greed/reset14, 30 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.6973,
+              "desc": "label/greed/reset14, 30 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset14, 30 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min": {
+              "value": -0.0035150387231510094,
+              "desc": "label/greed/reset14, 30 days ahead: loo_min",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max": {
+              "value": 0.04659866229136589,
+              "desc": "label/greed/reset14, 30 days ahead: loo_max",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min_year": {
+              "value": 2019,
+              "desc": "label/greed/reset14, 30 days ahead: loo_min_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max_year": {
+              "value": 2025,
+              "desc": "label/greed/reset14, 30 days ahead: loo_max_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_lo": {
+              "value": -0.08644532042166728,
+              "desc": "Matched, 30 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_hi": {
+              "value": 0.11184794720870223,
+              "desc": "Matched, 30 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_median": {
+              "value": -0.019704124262547196,
+              "desc": "Matched without days +-14 of episodes, 30 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_pctile": {
+              "value": 0.8248,
+              "desc": "Matched without days +-14 of episodes, 30 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_min_pool": {
+              "value": 16,
+              "desc": "Matched without days +-14 of episodes, 30 days: smallest pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_lo": {
+              "value": -0.11512783160195073,
+              "desc": "Matched_excl14, 30 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_hi": {
+              "value": 0.08407106795376985,
+              "desc": "Matched_excl14, 30 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_share_near14": {
+              "value": 0.24925407020417037,
+              "desc": "Matched, 30 days: expected share of matched days within +-14 days of an episode",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r90": {
+            "n": {
+              "value": 13,
+              "desc": "label/greed/reset14, 90 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.19676021224488305,
+              "desc": "label/greed/reset14, 90 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.18424382809592013,
+              "desc": "label/greed/reset14, 90 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.6537372736195052,
+              "desc": "label/greed/reset14, 90 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.6923076923076923,
+              "desc": "label/greed/reset14, 90 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.3886381724379495,
+              "desc": "label/greed/reset14, 90 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.03956310679611652,
+              "desc": "label/greed/reset14, 90 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.4007309999317157,
+              "desc": "label/greed/reset14, 90 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.8689,
+              "desc": "label/greed/reset14, 90 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.01759473716925175,
+              "desc": "label/greed/reset14, 90 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.8391,
+              "desc": "label/greed/reset14, 90 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset14, 90 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min": {
+              "value": 0.1543213530608165,
+              "desc": "label/greed/reset14, 90 days ahead: loo_min",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max": {
+              "value": 0.26641044724916263,
+              "desc": "label/greed/reset14, 90 days ahead: loo_max",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min_year": {
+              "value": 2020,
+              "desc": "label/greed/reset14, 90 days ahead: loo_min_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max_year": {
+              "value": 2025,
+              "desc": "label/greed/reset14, 90 days ahead: loo_max_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_lo": {
+              "value": -0.16740306766641733,
+              "desc": "Matched, 90 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_hi": {
+              "value": 0.3202757011791123,
+              "desc": "Matched, 90 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_median": {
+              "value": -0.05775299969551717,
+              "desc": "Matched without days +-14 of episodes, 90 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_pctile": {
+              "value": 0.9212,
+              "desc": "Matched without days +-14 of episodes, 90 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_min_pool": {
+              "value": 16,
+              "desc": "Matched without days +-14 of episodes, 90 days: smallest pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_lo": {
+              "value": -0.1952841156988735,
+              "desc": "Matched_excl14, 90 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_hi": {
+              "value": 0.25625357467739396,
+              "desc": "Matched_excl14, 90 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_share_near14": {
+              "value": 0.2437306448317426,
+              "desc": "Matched, 90 days: expected share of matched days within +-14 days of an episode",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r180": {
+            "n": {
+              "value": 13,
+              "desc": "label/greed/reset14, 180 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.18134958457403783,
+              "desc": "label/greed/reset14, 180 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.21718181645474782,
+              "desc": "label/greed/reset14, 180 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 1.629000198287367,
+              "desc": "label/greed/reset14, 180 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.5384615384615384,
+              "desc": "label/greed/reset14, 180 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.2824828844809931,
+              "desc": "label/greed/reset14, 180 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.15408824208583694,
+              "desc": "label/greed/reset14, 180 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.30241852288368665,
+              "desc": "label/greed/reset14, 180 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.6112,
+              "desc": "label/greed/reset14, 180 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.061086394325617466,
+              "desc": "label/greed/reset14, 180 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.7571,
+              "desc": "label/greed/reset14, 180 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset14, 180 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min": {
+              "value": -0.14688398903076172,
+              "desc": "label/greed/reset14, 180 days ahead: loo_min",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max": {
+              "value": 0.24617294153254177,
+              "desc": "label/greed/reset14, 180 days ahead: loo_max",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_min_year": {
+              "value": 2024,
+              "desc": "label/greed/reset14, 180 days ahead: loo_min_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "loo_max_year": {
+              "value": 2021,
+              "desc": "label/greed/reset14, 180 days ahead: loo_max_year",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_lo": {
+              "value": -0.182248007466288,
+              "desc": "Matched, 180 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_ci_hi": {
+              "value": 0.4475822147651005,
+              "desc": "Matched, 180 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_median": {
+              "value": 0.08900856238008803,
+              "desc": "Matched without days +-14 of episodes, 180 days: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_pctile": {
+              "value": 0.729,
+              "desc": "Matched without days +-14 of episodes, 180 days: share lower",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_min_pool": {
+              "value": 16,
+              "desc": "Matched without days +-14 of episodes, 180 days: smallest pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_lo": {
+              "value": -0.18026923567657005,
+              "desc": "Matched_excl14, 180 days: 2.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_excl14_ci_hi": {
+              "value": 0.47470668001036365,
+              "desc": "Matched_excl14, 180 days: 97.5% of matched medians",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_share_near14": {
+              "value": 0.24938584155895527,
+              "desc": "Matched, 180 days: expected share of matched days within +-14 days of an episode",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "episodes_by_year": {
+            "y2019": {
+              "value": 2,
+              "desc": "Episodes in 2019 (greed)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2020": {
+              "value": 2,
+              "desc": "Episodes in 2020 (greed)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2021": {
+              "value": 3,
+              "desc": "Episodes in 2021 (greed)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2024": {
+              "value": 4,
+              "desc": "Episodes in 2024 (greed)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2025": {
+              "value": 2,
+              "desc": "Episodes in 2025 (greed)",
+              "source": "scripts/02_analysis.py"
+            },
+            "y2026": {
+              "value": 1,
+              "desc": "Episodes in 2026 (greed)",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "share_nonzone_days_near_episode": {
+            "value": 0.11661506707946337,
+            "desc": "Share of days outside the zone that are within +-14 days of an episode",
+            "source": "scripts/02_analysis.py"
+          },
+          "episode": {
+            "d20190511": {
+              "fng": {
+                "value": 76,
+                "desc": "Index value on the episode day 2019-05-11",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.41034446333437646,
+                "desc": "30-day trailing return 2019-05-11",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.025611131366746642,
+                "desc": "7-day return after 2019-05-11",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.12810935782098354,
+                "desc": "30-day return after 2019-05-11",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.6788610303240994,
+                "desc": "90-day return after 2019-05-11",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.30241852288368665,
+                "desc": "180-day return after 2019-05-11",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20190616": {
+              "fng": {
+                "value": 80,
+                "desc": "Index value on the episode day 2019-06-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.21726900204751431,
+                "desc": "30-day trailing return 2019-06-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.21810209162401017,
+                "desc": "7-day return after 2019-06-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.05431051910294826,
+                "desc": "30-day return after 2019-06-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.1543213530608165,
+                "desc": "90-day return after 2019-06-16",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.18929828343197452,
+                "desc": "180-day return after 2019-06-16",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20200728": {
+              "fng": {
+                "value": 76,
+                "desc": "Index value on the episode day 2020-07-28",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.19634173764719431,
+                "desc": "30-day trailing return 2020-07-28",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.026195940500280956,
+                "desc": "7-day return after 2020-07-28",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.038886805479783515,
+                "desc": "30-day return after 2020-07-28",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.19676021224488305,
+                "desc": "90-day return after 2020-07-28",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 1.9579223694260275,
+                "desc": "180-day return after 2020-07-28",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20201025": {
+              "fng": {
+                "value": 76,
+                "desc": "Index value on the episode day 2020-10-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.21916649433359492,
+                "desc": "30-day trailing return 2020-10-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.05623451990700623,
+                "desc": "7-day return after 2020-10-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.47058561666703747,
+                "desc": "30-day return after 2020-10-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 1.4620783293664896,
+                "desc": "90-day return after 2020-10-25",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 2.9240008504217188,
+                "desc": "180-day return after 2020-10-25",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20210331": {
+              "fng": {
+                "value": 76,
+                "desc": "Index value on the episode day 2021-03-31",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.18459504430896545,
+                "desc": "30-day trailing return 2021-03-31",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.047447632002083795,
+                "desc": "7-day return after 2021-03-31",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.017811886337462002,
+                "desc": "30-day return after 2021-03-31",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.3886381724379495,
+                "desc": "90-day return after 2021-03-31",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.2824828844809931,
+                "desc": "180-day return after 2021-03-31",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20210814": {
+              "fng": {
+                "value": 76,
+                "desc": "Index value on the episode day 2021-08-14",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.47642754077791727,
+                "desc": "30-day trailing return 2021-08-14",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.03725123229947158,
+                "desc": "7-day return after 2021-08-14",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.04520601990587758,
+                "desc": "30-day return after 2021-08-14",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.36231697158036225,
+                "desc": "90-day return after 2021-08-14",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.07591211194065839,
+                "desc": "180-day return after 2021-08-14",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20211007": {
+              "fng": {
+                "value": 76,
+                "desc": "Index value on the episode day 2021-10-07",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.14769396290052028,
+                "desc": "30-day trailing return 2021-10-07",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.06623975880362676,
+                "desc": "7-day return after 2021-10-07",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.1428903702541331,
+                "desc": "30-day return after 2021-10-07",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.19213624114580186,
+                "desc": "90-day return after 2021-10-07",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.15408824208583694,
+                "desc": "180-day return after 2021-10-07",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20240109": {
+              "fng": {
+                "value": 76,
+                "desc": "Index value on the episode day 2024-01-09",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.05299191518699331,
+                "desc": "30-day trailing return 2024-01-09",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.06445564953372374,
+                "desc": "7-day return after 2024-01-09",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.017812838863587088,
+                "desc": "30-day return after 2024-01-09",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.5532422468011278,
+                "desc": "90-day return after 2024-01-09",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.2114033832140534,
+                "desc": "180-day return after 2024-01-09",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20240213": {
+              "fng": {
+                "value": 79,
+                "desc": "Index value on the episode day 2024-02-13",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.19091280505411268,
+                "desc": "30-day trailing return 2024-02-13",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.05149398616769285,
+                "desc": "7-day return after 2024-02-13",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.4364090327505721,
+                "desc": "30-day return after 2024-02-13",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.26641044724916263,
+                "desc": "90-day return after 2024-02-13",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.18134958457403783,
+                "desc": "180-day return after 2024-02-13",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20240521": {
+              "fng": {
+                "value": 76,
+                "desc": "Index value on the episode day 2024-05-21",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.08018321203120049,
+                "desc": "30-day trailing return 2024-05-21",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.024946420685079573,
+                "desc": "7-day return after 2024-05-21",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.0752455439430213,
+                "desc": "30-day return after 2024-05-21",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.1526741758963932,
+                "desc": "90-day return after 2024-05-21",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.28094249985103015,
+                "desc": "180-day return after 2024-05-21",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20241030": {
+              "fng": {
+                "value": 77,
+                "desc": "Index value on the episode day 2024-10-30",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.14238896506246346,
+                "desc": "30-day trailing return 2024-10-30",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.04460932474150847,
+                "desc": "7-day return after 2024-10-30",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.3471608302137792,
+                "desc": "30-day return after 2024-10-30",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.4007309999317157,
+                "desc": "90-day return after 2024-10-30",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": 0.3133115137327189,
+                "desc": "180-day return after 2024-10-30",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20250523": {
+              "fng": {
+                "value": 78,
+                "desc": "Index value on the episode day 2025-05-23",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.14544842475932618,
+                "desc": "30-day trailing return 2025-05-23",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.031055467706812445,
+                "desc": "7-day return after 2025-05-23",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.05921105720086883,
+                "desc": "30-day return after 2025-05-23",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": 0.04828347075941375,
+                "desc": "90-day return after 2025-05-23",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.14688398903076172,
+                "desc": "180-day return after 2025-05-23",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20250712": {
+              "fng": {
+                "value": 79,
+                "desc": "Index value on the episode day 2025-07-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.1111770385513704,
+                "desc": "30-day trailing return 2025-07-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": 0.0035769034236075026,
+                "desc": "7-day return after 2025-07-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": 0.010781808891159983,
+                "desc": "30-day return after 2025-07-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r90": {
+                "value": -0.03956310679611652,
+                "desc": "90-day return after 2025-07-12",
+                "source": "scripts/02_analysis.py"
+              },
+              "r180": {
+                "value": -0.22415269971044116,
+                "desc": "180-day return after 2025-07-12",
+                "source": "scripts/02_analysis.py"
+              }
+            },
+            "d20260922": {
+              "fng": {
+                "value": 78,
+                "desc": "Index value on the episode day 2026-09-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "trail30": {
+                "value": 0.10901999125221917,
+                "desc": "30-day trailing return 2026-09-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "r7": {
+                "value": -0.02952027037686278,
+                "desc": "7-day return after 2026-09-22",
+                "source": "scripts/02_analysis.py"
+              },
+              "r30": {
+                "value": -0.055591579304885785,
+                "desc": "30-day return after 2026-09-22",
+                "source": "scripts/02_analysis.py"
+              }
+            }
+          }
+        },
+        "reset7": {
+          "episodes": {
+            "value": 23,
+            "desc": "Episodes (label, greed, 7-day reset)",
+            "source": "scripts/02_analysis.py"
+          },
+          "r7": {
+            "n": {
+              "value": 23,
+              "desc": "label/greed/reset7, 7 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.0035769034236075026,
+              "desc": "label/greed/reset7, 7 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.06440539957134124,
+              "desc": "label/greed/reset7, 7 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.05528641315914356,
+              "desc": "label/greed/reset7, 7 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.5652173913043478,
+              "desc": "label/greed/reset7, 7 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.14665017212929532,
+              "desc": "label/greed/reset7, 7 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.031055467706812445,
+              "desc": "label/greed/reset7, 7 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.03157489894506016,
+              "desc": "label/greed/reset7, 7 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.4863,
+              "desc": "label/greed/reset7, 7 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.004737518164833032,
+              "desc": "label/greed/reset7, 7 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.488,
+              "desc": "label/greed/reset7, 7 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset7, 7 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r30": {
+            "n": {
+              "value": 23,
+              "desc": "label/greed/reset7, 30 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.017811886337462002,
+              "desc": "label/greed/reset7, 30 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.08308235859959083,
+              "desc": "label/greed/reset7, 30 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.3262459864679287,
+              "desc": "label/greed/reset7, 30 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.4782608695652174,
+              "desc": "label/greed/reset7, 30 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.17752961691864266,
+              "desc": "label/greed/reset7, 30 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.05553791738101277,
+              "desc": "label/greed/reset7, 30 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.05431051910294826,
+              "desc": "label/greed/reset7, 30 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.1727,
+              "desc": "label/greed/reset7, 30 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.002773232562391703,
+              "desc": "label/greed/reset7, 30 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.2753,
+              "desc": "label/greed/reset7, 30 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset7, 30 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r90": {
+            "n": {
+              "value": 22,
+              "desc": "label/greed/reset7, 90 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.048775380961117165,
+              "desc": "label/greed/reset7, 90 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.3695953737135363,
+              "desc": "label/greed/reset7, 90 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.6662991519718025,
+              "desc": "label/greed/reset7, 90 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.45454545454545453,
+              "desc": "label/greed/reset7, 90 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.4416414468547357,
+              "desc": "label/greed/reset7, 90 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.17236933777204733,
+              "desc": "label/greed/reset7, 90 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.2583191623205894,
+              "desc": "label/greed/reset7, 90 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.1811,
+              "desc": "label/greed/reset7, 90 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.02601087135779734,
+              "desc": "label/greed/reset7, 90 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.2702,
+              "desc": "label/greed/reset7, 90 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset7, 90 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r180": {
+            "n": {
+              "value": 22,
+              "desc": "label/greed/reset7, 180 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.1236385470239234,
+              "desc": "label/greed/reset7, 180 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.24912362237183486,
+              "desc": "label/greed/reset7, 180 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 1.7975128480166571,
+              "desc": "label/greed/reset7, 180 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.5909090909090909,
+              "desc": "label/greed/reset7, 180 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.38748305151576046,
+              "desc": "label/greed/reset7, 180 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.1274670789131247,
+              "desc": "label/greed/reset7, 180 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.25691095304887,
+              "desc": "label/greed/reset7, 180 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.4816,
+              "desc": "label/greed/reset7, 180 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.08879144065924349,
+              "desc": "label/greed/reset7, 180 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.6009,
+              "desc": "label/greed/reset7, 180 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset7, 180 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          }
+        },
+        "reset30": {
+          "episodes": {
+            "value": 12,
+            "desc": "Episodes (label, greed, 30-day reset)",
+            "source": "scripts/02_analysis.py"
+          },
+          "r7": {
+            "n": {
+              "value": 12,
+              "desc": "label/greed/reset30, 7 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.0259035359335138,
+              "desc": "label/greed/reset30, 7 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.030901947973817477,
+              "desc": "label/greed/reset30, 7 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.05576046653307489,
+              "desc": "label/greed/reset30, 7 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.6666666666666666,
+              "desc": "label/greed/reset30, 7 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.06445564953372374,
+              "desc": "label/greed/reset30, 7 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.027233345530971176,
+              "desc": "label/greed/reset30, 7 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.04805165545460066,
+              "desc": "label/greed/reset30, 7 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.8469,
+              "desc": "label/greed/reset30, 7 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.00481117970561748,
+              "desc": "label/greed/reset30, 7 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.8308,
+              "desc": "label/greed/reset30, 7 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset30, 7 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r30": {
+            "n": {
+              "value": 12,
+              "desc": "label/greed/reset30, 30 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.02483430718547175,
+              "desc": "label/greed/reset30, 30 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.05884910941127053,
+              "desc": "label/greed/reset30, 30 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.42748421249689283,
+              "desc": "label/greed/reset30, 30 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.5833333333333334,
+              "desc": "label/greed/reset30, 30 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.0752455439430213,
+              "desc": "label/greed/reset30, 30 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.05039879960538168,
+              "desc": "label/greed/reset30, 30 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.23763509401738137,
+              "desc": "label/greed/reset30, 30 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.5666,
+              "desc": "label/greed/reset30, 30 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.0023421119320733708,
+              "desc": "label/greed/reset30, 30 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.6683,
+              "desc": "label/greed/reset30, 30 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset30, 30 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r90": {
+            "n": {
+              "value": 11,
+              "desc": "label/greed/reset30, 90 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.26641044724916263,
+              "desc": "label/greed/reset30, 90 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.03956310679611652,
+              "desc": "label/greed/reset30, 90 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.6788610303240994,
+              "desc": "label/greed/reset30, 90 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.8181818181818182,
+              "desc": "label/greed/reset30, 90 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.1526741758963932,
+              "desc": "label/greed/reset30, 90 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": 0.04828347075941375,
+              "desc": "label/greed/reset30, 90 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.5532422468011278,
+              "desc": "label/greed/reset30, 90 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.943,
+              "desc": "label/greed/reset30, 90 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.023053870852019154,
+              "desc": "label/greed/reset30, 90 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.9255,
+              "desc": "label/greed/reset30, 90 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset30, 90 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r180": {
+            "n": {
+              "value": 11,
+              "desc": "label/greed/reset30, 180 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.2114033832140534,
+              "desc": "label/greed/reset30, 180 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.18929828343197452,
+              "desc": "label/greed/reset30, 180 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 1.9579223694260275,
+              "desc": "label/greed/reset30, 180 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.6363636363636364,
+              "desc": "label/greed/reset30, 180 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.22415269971044116,
+              "desc": "label/greed/reset30, 180 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.14688398903076172,
+              "desc": "label/greed/reset30, 180 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.3133115137327189,
+              "desc": "label/greed/reset30, 180 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.6546,
+              "desc": "label/greed/reset30, 180 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.06964720999225271,
+              "desc": "label/greed/reset30, 180 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.7823,
+              "desc": "label/greed/reset30, 180 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 29,
+              "desc": "label/greed/reset30, 180 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          }
+        }
+      }
+    },
+    "brief": {
+      "fear": {
+        "reset14": {
+          "episodes": {
+            "value": 26,
+            "desc": "Episodes (brief, fear, 14-day reset)",
+            "source": "scripts/02_analysis.py"
+          },
+          "r7": {
+            "n": {
+              "value": 26,
+              "desc": "brief/fear/reset14, 7 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.010226839984982805,
+              "desc": "brief/fear/reset14, 7 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.10797871799555403,
+              "desc": "brief/fear/reset14, 7 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.06012089682732924,
+              "desc": "brief/fear/reset14, 7 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.38461538461538464,
+              "desc": "brief/fear/reset14, 7 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.365819363999662,
+              "desc": "brief/fear/reset14, 7 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.04102973445946734,
+              "desc": "brief/fear/reset14, 7 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.013312122580766639,
+              "desc": "brief/fear/reset14, 7 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.1454,
+              "desc": "brief/fear/reset14, 7 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 11,
+              "desc": "brief/fear/reset14, 7 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": -9.132389562313548e-05,
+              "desc": "brief/fear/reset14, 7 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.2108,
+              "desc": "brief/fear/reset14, 7 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r30": {
+            "n": {
+              "value": 26,
+              "desc": "brief/fear/reset14, 30 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.01074633036029865,
+              "desc": "brief/fear/reset14, 30 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.14861956252582886,
+              "desc": "brief/fear/reset14, 30 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.27207872521422005,
+              "desc": "brief/fear/reset14, 30 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.5,
+              "desc": "brief/fear/reset14, 30 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.21936758260010125,
+              "desc": "brief/fear/reset14, 30 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.07170231037835428,
+              "desc": "brief/fear/reset14, 30 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.028846830479090535,
+              "desc": "brief/fear/reset14, 30 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.2099,
+              "desc": "brief/fear/reset14, 30 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 11,
+              "desc": "brief/fear/reset14, 30 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.0012251422616475216,
+              "desc": "brief/fear/reset14, 30 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.3546,
+              "desc": "brief/fear/reset14, 30 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r90": {
+            "n": {
+              "value": 26,
+              "desc": "brief/fear/reset14, 90 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.04021889325316619,
+              "desc": "brief/fear/reset14, 90 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.297830989177463,
+              "desc": "brief/fear/reset14, 90 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.39540802723874835,
+              "desc": "brief/fear/reset14, 90 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.5,
+              "desc": "brief/fear/reset14, 90 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.3656080272779032,
+              "desc": "brief/fear/reset14, 90 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.14621839170495765,
+              "desc": "brief/fear/reset14, 90 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.20729154892797697,
+              "desc": "brief/fear/reset14, 90 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.1829,
+              "desc": "brief/fear/reset14, 90 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 11,
+              "desc": "brief/fear/reset14, 90 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.007610235225027712,
+              "desc": "brief/fear/reset14, 90 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.2123,
+              "desc": "brief/fear/reset14, 90 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r180": {
+            "n": {
+              "value": 25,
+              "desc": "brief/fear/reset14, 180 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": -0.09063290710761707,
+              "desc": "brief/fear/reset14, 180 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.3983035724427886,
+              "desc": "brief/fear/reset14, 180 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.7276106170664073,
+              "desc": "brief/fear/reset14, 180 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.44,
+              "desc": "brief/fear/reset14, 180 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.5316910815599256,
+              "desc": "brief/fear/reset14, 180 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.24063721917591518,
+              "desc": "brief/fear/reset14, 180 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.3193848840341793,
+              "desc": "brief/fear/reset14, 180 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.0659,
+              "desc": "brief/fear/reset14, 180 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 11,
+              "desc": "brief/fear/reset14, 180 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.11345589101909326,
+              "desc": "brief/fear/reset14, 180 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.2473,
+              "desc": "brief/fear/reset14, 180 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            }
+          }
+        }
+      },
+      "greed": {
+        "reset14": {
+          "episodes": {
+            "value": 9,
+            "desc": "Episodes (brief, greed, 14-day reset)",
+            "source": "scripts/02_analysis.py"
+          },
+          "r7": {
+            "n": {
+              "value": 9,
+              "desc": "brief/greed/reset14, 7 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.04754709908651655,
+              "desc": "brief/greed/reset14, 7 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.10531187295135085,
+              "desc": "brief/greed/reset14, 7 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.19667455553414734,
+              "desc": "brief/greed/reset14, 7 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.7777777777777778,
+              "desc": "brief/greed/reset14, 7 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.11496678631562574,
+              "desc": "brief/greed/reset14, 7 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.10289814461028213,
+              "desc": "brief/greed/reset14, 7 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.18709872063010802,
+              "desc": "brief/greed/reset14, 7 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.9443,
+              "desc": "brief/greed/reset14, 7 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.013522211559747754,
+              "desc": "brief/greed/reset14, 7 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.8798,
+              "desc": "brief/greed/reset14, 7 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 24,
+              "desc": "brief/greed/reset14, 7 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r30": {
+            "n": {
+              "value": 9,
+              "desc": "brief/greed/reset14, 30 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.038003169435986583,
+              "desc": "brief/greed/reset14, 30 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.15431342369967582,
+              "desc": "brief/greed/reset14, 30 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.26030815319056283,
+              "desc": "brief/greed/reset14, 30 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.5555555555555556,
+              "desc": "brief/greed/reset14, 30 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.2898095318043977,
+              "desc": "brief/greed/reset14, 30 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.12043939667349535,
+              "desc": "brief/greed/reset14, 30 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.24258661148452632,
+              "desc": "brief/greed/reset14, 30 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.6435,
+              "desc": "brief/greed/reset14, 30 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.026974891587529415,
+              "desc": "brief/greed/reset14, 30 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.556,
+              "desc": "brief/greed/reset14, 30 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 24,
+              "desc": "brief/greed/reset14, 30 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r90": {
+            "n": {
+              "value": 9,
+              "desc": "brief/greed/reset14, 90 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.09556446123068096,
+              "desc": "brief/greed/reset14, 90 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.3477911714729159,
+              "desc": "brief/greed/reset14, 90 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 0.6523933734847088,
+              "desc": "brief/greed/reset14, 90 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.6666666666666666,
+              "desc": "brief/greed/reset14, 90 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.35831492084790306,
+              "desc": "brief/greed/reset14, 90 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.3451602341291691,
+              "desc": "brief/greed/reset14, 90 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 0.4727951561546755,
+              "desc": "brief/greed/reset14, 90 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.6501,
+              "desc": "brief/greed/reset14, 90 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.12177685810158412,
+              "desc": "brief/greed/reset14, 90 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.4063,
+              "desc": "brief/greed/reset14, 90 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 24,
+              "desc": "brief/greed/reset14, 90 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          },
+          "r180": {
+            "n": {
+              "value": 9,
+              "desc": "brief/greed/reset14, 180 days ahead: n",
+              "source": "scripts/02_analysis.py"
+            },
+            "median": {
+              "value": 0.03742311356627703,
+              "desc": "brief/greed/reset14, 180 days ahead: median",
+              "source": "scripts/02_analysis.py"
+            },
+            "p10": {
+              "value": -0.40376481269617276,
+              "desc": "brief/greed/reset14, 180 days ahead: p10",
+              "source": "scripts/02_analysis.py"
+            },
+            "p90": {
+              "value": 2.461706734775539,
+              "desc": "brief/greed/reset14, 180 days ahead: p90",
+              "source": "scripts/02_analysis.py"
+            },
+            "share_positive": {
+              "value": 0.6666666666666666,
+              "desc": "brief/greed/reset14, 180 days ahead: share_positive",
+              "source": "scripts/02_analysis.py"
+            },
+            "worst": {
+              "value": -0.49156699427582684,
+              "desc": "brief/greed/reset14, 180 days ahead: worst",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_lo": {
+              "value": -0.3818142673012592,
+              "desc": "brief/greed/reset14, 180 days ahead: ci_lo",
+              "source": "scripts/02_analysis.py"
+            },
+            "ci_hi": {
+              "value": 2.4054966257259434,
+              "desc": "brief/greed/reset14, 180 days ahead: ci_hi",
+              "source": "scripts/02_analysis.py"
+            },
+            "random_pctile": {
+              "value": 0.3464,
+              "desc": "brief/greed/reset14, 180 days ahead: random_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_median": {
+              "value": 0.018026442557229183,
+              "desc": "brief/greed/reset14, 180 days ahead: matched_median",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_pctile": {
+              "value": 0.5345,
+              "desc": "brief/greed/reset14, 180 days ahead: matched_pctile",
+              "source": "scripts/02_analysis.py"
+            },
+            "matched_min_pool": {
+              "value": 24,
+              "desc": "brief/greed/reset14, 180 days ahead: matched_min_pool",
+              "source": "scripts/02_analysis.py"
+            }
+          }
+        }
+      }
+    }
+  }
+}
