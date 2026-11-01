@@ -5,6 +5,18 @@ unless a study's data/SOURCES.md says otherwise. Code is licensed under
 the MIT License (see LICENSE). Fonts in shared/fonts/ are licensed under
 the SIL Open Font License 1.1 (see shared/fonts/OFL.txt).
 
+Exception: studies whose data/SOURCES.md lists Binance Vision price data
+license everything derived from that data (data/results/, charts/ and the
+figures in FINDINGS.md) under Creative Commons Attribution-NonCommercial-
+ShareAlike 4.0 International (CC BY-NC-SA 4.0), as the Binance Vision
+Dataset Terms require. Non-commercial use only; adaptations must be shared
+under the same licence. Credit:
+
+    SwapHunt (swaphunt.dev). Price data: Binance Vision
+
+Summary: https://creativecommons.org/licenses/by-nc-sa/4.0/
+Legal code: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
 You are free to share and adapt the material for any purpose, even
 commercially, as long as you give appropriate credit:
 

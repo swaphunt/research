@@ -27,6 +27,7 @@ Some studies fetch raw data from public APIs instead of shipping it. See each st
 
 - Code: MIT (see [LICENSE](LICENSE))
 - Data, charts and text: CC BY 4.0 (see [LICENSE-DATA](LICENSE-DATA))
+  - Exception: studies that use Binance Vision price data (currently extreme-fear) license their derived data, charts and figures CC BY-NC-SA 4.0, non-commercial only. See the License section in each study's README.
 - Fonts in `shared/fonts/`: SIL Open Font License 1.1
 
 Please credit "SwapHunt (swaphunt.dev)".
