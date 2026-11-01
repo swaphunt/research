@@ -28,3 +28,12 @@ python -m venv venv && venv/bin/pip install -r requirements.txt
 - `charts/`: PNG and SVG
 - `FINDINGS.md`: key figures, definitions and caveats
 - Article: https://swaphunt.dev/research/extreme-fear-bitcoin-buy-signal
+
+## License
+
+The price data in this study comes from Binance Vision, which is licensed CC BY-NC-SA 4.0. Everything derived from it is therefore licensed **CC BY-NC-SA 4.0** (https://creativecommons.org/licenses/by-nc-sa/4.0/), not CC BY 4.0: the files in `data/results/`, the charts in `charts/` and the figures in `FINDINGS.md`. Non-commercial use only; share adaptations under the same licence. Credit: "SwapHunt (swaphunt.dev). Price data: Binance Vision". Code: MIT.
+
+## Versions
+
+- `extreme-fear-v1` (2026-10-31): first publication.
+- `extreme-fear-v2` (2026-11-01): adds the credit "Price data: Binance Vision" to the method notes and every chart, and licenses everything derived from the Binance price data CC BY-NC-SA 4.0 (see License). The numbers are unchanged.

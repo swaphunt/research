@@ -9,6 +9,7 @@ Colours per docs/STYLE.md: accent only for what the chart is about; everything e
 """
 import json
 
+import matplotlib.dates as mdates
 import matplotlib.ticker as mt
 import numpy as np
 import pandas as pd
@@ -16,7 +17,7 @@ import pandas as pd
 import common as C
 import chartstyle as cs
 
-SOURCE = "Source: alternative.me Fear & Greed Index, Binance BTCUSDT daily close · data: 1 Feb 2018 – 28 Oct 2026"
+SOURCE = "Source: alternative.me Fear & Greed Index · Price data: Binance Vision · data: 1 Feb 2018 – 28 Oct 2026"
 SITE = "swaphunt.dev"
 HORIZONS = (7, 30, 90, 180)
 INK = cs.INK
@@ -104,6 +105,11 @@ def chart_timeline(F, ep, btc):
                         textcoords="offset points", ha="center", fontsize=9.5, color=cs.ACCENT,
                         family="IBM Plex Mono")
     ax.grid(axis="x", visible=False)
+    # The axis ends with the data (Oct 2026); otherwise matplotlib adds an empty 2027 tick
+    last = b.date.max()
+    ax.set_xticks([pd.Timestamp(f"{y}-01-01") for y in range(b.date.min().year, last.year + 1)])
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+    ax.set_xlim(b.date.min() - pd.Timedelta(days=30), last + pd.Timedelta(days=30))
     cs.mono_ticks(ax)
     cs.frame(fig, "Most Extreme Fear episodes came in 2018, 2019 and 2022",
              f"BTC price (log scale) with the first day of each of the "

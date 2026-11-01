@@ -21,7 +21,7 @@ Review of the article (2026-10-29): (1) advice and FAQ rest only on the robust f
 
 ### Data
 - **Fear & Greed:** alternative.me, daily from 2018-02-01 (`data.fng_first`) to 2026-10-29 (`data.fng_last`), 3189 days (`data.fng_days`). 4 calendar days are missing (`data.fng_missing_days`): 3 after 2018-04-13 and 1 after 2024-10-25 (`fng_gaps.json`).
-- **BTC:** BTCUSDT daily candles from Binance (via `data-api.binance.vision`), from 2017-08-17 (`data.btc_first`) to 2026-10-28 (`data.btc_last`), no gaps (`data.btc_missing_days`). Only completed daily candles; the current day is left out (`data.fng_days_without_btc`).
+- **BTC:** BTCUSDT daily candles from Binance (via `data-api.binance.vision`), from 2017-08-17 (`data.btc_first`) to 2026-10-28 (`data.btc_last`), no gaps (`data.btc_missing_days`). Only completed daily candles; the current day is left out (`data.fng_days_without_btc`). Price data: Binance Vision (CC BY-NC-SA 4.0).
 - Raw responses and their sha256 hashes were logged at fetch time; raw responses are not redistributed, see `data/SOURCES.md`.
 
 ### Time alignment (no look-ahead)

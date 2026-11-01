@@ -121,3 +121,42 @@ def test_snapshots_load(tmp_path, monkeypatch):
 def test_clock_times_are_ignored(tmp_path):
     s = make_study(tmp_path, {}, "published at 00:00 UTC, updated 14:30:15")
     assert check_numbers.check(s) == []
+
+
+def make_findings_md(tmp_path, findings, text, name="FINDINGS.md"):
+    s = make_study(tmp_path, findings, "")
+    (s / name).write_text(text)
+    return s
+
+
+def test_danish_format_in_findings(tmp_path):
+    f = {"a": {"value": 5123.54}, "b": {"value": 0.5715}, "n": {"value": 4959}, "t": {"value": 5e-05}}
+    s = make_findings_md(tmp_path, f, "5123,54 pp og 5.123,5 pp, 57,1 % og 57.1%, 4.959 og 4,959 dage, 0,00005 og 0.00005.")
+    assert check_numbers.check(s) == []
+
+
+def test_danish_rounding_and_untraced(tmp_path):
+    s = make_findings_md(tmp_path, {"a": {"value": 6573.46}}, "+6573,5 og 6.573 men 0,5 og 1.234,5")
+    assert [b[2] for b in check_numbers.check(s)] == ["0,5", "1.234,5"]
+
+
+def test_article_is_english_only(tmp_path):
+    s = make_study(tmp_path, {"a": {"value": 1234.5}}, "1,234.5 and 1234.5 but not 1.234,5")
+    assert [b[2] for b in check_numbers.check(s)] == ["1.234,5"]
+
+
+def test_english_findings_file_is_english_only(tmp_path):
+    s = make_findings_md(tmp_path, {"a": {"value": 57.1}}, "57.1 but not 57,1", name="FINDINGS.en.md")
+    assert [b[2] for b in check_numbers.check(s, ("FINDINGS.en.md",))] == ["57,1"]
+
+
+def test_ip_addresses_are_ignored(tmp_path):
+    s = make_findings_md(tmp_path, {}, "resolvere 1.1.1.1 og 8.8.8.8")
+    assert check_numbers.check(s) == []
+
+
+def test_private_full_findings_count(tmp_path):
+    s = make_findings_md(tmp_path, {"a": {"value": 1.5}}, "1,5 og 2,5")
+    (s / "data" / "results" / "private").mkdir()
+    (s / "data" / "results" / "private" / "findings_full.json").write_text(json.dumps({"b": {"value": 2.5}}))
+    assert check_numbers.check(s) == []
