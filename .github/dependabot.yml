@@ -1,0 +1,16 @@
+# Dependabot: weekly updates of the pinned GitHub Actions; minor and patch bumps are grouped into one PR.
+# No pip entry: the study code is exported from a private monorepo, so changes made here would be
+# overwritten, and published studies must keep the dependencies they were run with.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    groups:
+      github-actions-minor-patch:
+        update-types:
+          - "minor"
+          - "patch"
