@@ -10,7 +10,8 @@ permissions:
   contents: read
 
 concurrency:
-  group: gitleaks-${{ github.ref }}
+  group: gitleaks-${{ github.event_name }}-${{ github.ref }}
+  # Separate groups per event: a pull_request run (cancel-in-progress) must never cancel a push run.
   # Pull requests only: a cancelled push run would leave that push's commits unscanned.
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
